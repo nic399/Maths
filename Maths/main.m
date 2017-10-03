@@ -32,6 +32,13 @@ int main(int argc, const char * argv[]) {
             }
             
             
+            NSLog(@"Continue playing? (y/n): ");
+            NSString* continuePlaying = [[myInputHandler getInput] lowercaseString];
+            if ([continuePlaying isEqualToString:@"n"] || [continuePlaying isEqualToString:@"quit"]) {
+                play = false;
+            }
+            
+            
         }
         
         
