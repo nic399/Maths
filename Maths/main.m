@@ -8,22 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
+#import "InputHandler.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL play = true;
         NSLog(@"Welcome to the Maths Game: ");
+        InputHandler* myInputHandler = [InputHandler new];
         
         while (play) {
             AdditionQuestion * q1 = [AdditionQuestion new];
             [q1 printQuestion];
             
-            char inputChar[127];
-            fgets(inputChar, 127, stdin);
-            NSString* inputString = [NSString stringWithCString:inputChar encoding:NSUTF8StringEncoding];
-            NSString* trimmedString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSString* inputString = [myInputHandler getInput];
             
-            int answer = [trimmedString intValue];
+            int answer = [inputString intValue];
             BOOL correct = [q1 checkAnswer:answer];
             if (correct==true) {
                 NSLog(@"Right!");
