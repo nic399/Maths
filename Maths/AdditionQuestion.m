@@ -17,8 +17,8 @@
         self = [super init];
         if (self)
         {
-            self.a = arc4random_uniform(1000000);
-            self.b = arc4random_uniform(1000000);
+            self.a = arc4random_uniform(100);
+            self.b = arc4random_uniform(100);
         }
         
         return self;
@@ -33,7 +33,7 @@
     -(BOOL) checkAnswer:(int)guess
     {
         
-        return true;
+        return self.a + self.b == guess;
     }
     
     
