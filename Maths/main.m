@@ -10,8 +10,27 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        BOOL play = true;
+        NSLog(@"Welcome to the Maths Game: ");
+        
+        while (play) {
+            char inputChar[127];
+            fgets(inputChar, 127, stdin);
+            NSString* inputString = [NSString stringWithCString:inputChar encoding:NSUTF8StringEncoding];
+            NSString* trimmedString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSLog(@"You entered %@", trimmedString);
+
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
     }
     return 0;
 }
