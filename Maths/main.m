@@ -9,28 +9,25 @@
 #import <Foundation/Foundation.h>
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
+#import "ScoreKeeper.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL play = true;
         NSLog(@"Welcome to the Maths Game: ");
         InputHandler* myInputHandler = [InputHandler new];
+        ScoreKeeper* myScoreKeeper = [[ScoreKeeper alloc] init];
         
         while (play) {
             AdditionQuestion * q1 = [AdditionQuestion new];
             [q1 printQuestion];
             
-            NSString* inputString = [myInputHandler getInput];
+            // NSString* inputString = [myInputHandler getInput];
+            // int answer = [inputString intValue];
+            // BOOL correct = [q1 checkAnswer:answer];
             
-            int answer = [inputString intValue];
-            BOOL correct = [q1 checkAnswer:answer];
-            if (correct==true) {
-                NSLog(@"Right!");
-            }
-            else {
-                NSLog(@"Wrong!");
-            }
-            
+            [myScoreKeeper adjustScore:[q1 checkAnswer:[[myInputHandler getInput] intValue]]];
+            [myScoreKeeper printScore];
             
             NSLog(@"Continue playing? (y/n): ");
             NSString* continuePlaying = [[myInputHandler getInput] lowercaseString];
