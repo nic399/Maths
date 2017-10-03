@@ -27,7 +27,7 @@
     
     -(void) printQuestion
     {
-        
+        NSLog(@"%i + %i = ", self.a, self.b);
     }
     
     -(BOOL) checkAnswer:(int)guess

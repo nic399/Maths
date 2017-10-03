@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdditionQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -20,7 +21,8 @@ int main(int argc, const char * argv[]) {
             NSString* trimmedString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             NSLog(@"You entered %@", trimmedString);
 
-            
+            AdditionQuestion * q1 = [AdditionQuestion new];
+            [q1 printQuestion];
             
             
             
