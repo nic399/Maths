@@ -10,4 +10,7 @@
 
 @interface MultiplicationQuestion : Question
 
+-(void)printQuestion;
+-(BOOL)checkAnswer: (int) guess;
+
 @end

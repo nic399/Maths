@@ -18,7 +18,7 @@
 @property int leftVal;
 
 
--(Question *) init;
+-(instancetype) init;
 -(void)printQuestion;
 -(BOOL)checkAnswer: (int) guess;
 -(double)timeTakenInSec;

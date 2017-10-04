@@ -10,4 +10,7 @@
 
 @interface SubtractionQuestion : Question
 
+-(void)printQuestion;
+-(BOOL)checkAnswer: (int) guess;
+
 @end

@@ -12,7 +12,7 @@
 @implementation Question
 
 
--(Question*)init
+-(instancetype)init
 {
     self = [super init];
     if (self)
@@ -28,13 +28,13 @@
 
 -(void) printQuestion
 {
-    NSLog(@"%i + %i = ", self.rightVal, self.leftVal);
+    NSLog(@"Error: printQuestion method must be overridden in all subclasses");
 }
 
 -(BOOL) checkAnswer:(int)guess
 {
-    endTime = [NSDate date];
-    return self.rightVal + self.leftVal == guess;
+    NSLog(@"Error: checkAnswer method must be overridden in all subclasses");
+    return false;
 }
 
 -(double)timeTakenInSec {

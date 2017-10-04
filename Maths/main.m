@@ -14,6 +14,7 @@
 #import "SubtractionQuestion.h"
 #import "DivisionQuestion.h"
 #import "MultiplicationQuestion.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -26,10 +27,6 @@ int main(int argc, const char * argv[]) {
         while (play) {
             Question * q1 = [AdditionQuestion new];
             [q1 printQuestion];
-            
-            // NSString* inputString = [myInputHandler getInput];
-            // int answer = [inputString intValue];
-            // BOOL correct = [q1 checkAnswer:answer];
             
             [myScoreKeeper adjustScore:[q1 checkAnswer:[[myInputHandler getInput] intValue]]];
             NSLog(@"Time spent on this question: %.2f seconds", [q1 timeTakenInSec]);

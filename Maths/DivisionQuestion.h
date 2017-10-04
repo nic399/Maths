@@ -10,4 +10,9 @@
 
 @interface DivisionQuestion : Question
 
+-(instancetype)init;
+-(void)printQuestion;
+-(BOOL)checkAnswer: (int) guess;
+-(void)generateQuestion;
+
 @end

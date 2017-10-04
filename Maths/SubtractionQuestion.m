@@ -10,4 +10,13 @@
 
 @implementation SubtractionQuestion
 
+-(void)printQuestion{
+    NSLog(@"%i - %i = ", self.leftVal, self.rightVal);
+}
+
+-(BOOL)checkAnswer:(int)guess {
+    endTime = [NSDate date];
+    return self.leftVal-self.rightVal == guess;
+}
+
 @end
