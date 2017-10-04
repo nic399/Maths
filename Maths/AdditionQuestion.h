@@ -9,12 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface AdditionQuestion : NSObject
-    
-    @property int a;
-    @property int b;
-    
-    -(AdditionQuestion *) init;
-    -(void) printQuestion;
-    -(BOOL) checkAnswer: (int) guess;
+{
+    NSDate *startTime;
+    NSDate *endTime;
+}
+
+@property int a;
+@property int b;
+
+
+-(AdditionQuestion *) init;
+-(void)printQuestion;
+-(BOOL)checkAnswer: (int) guess;
+-(double)timeTakenInSec;
 
 @end

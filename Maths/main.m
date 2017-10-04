@@ -27,6 +27,7 @@ int main(int argc, const char * argv[]) {
             // BOOL correct = [q1 checkAnswer:answer];
             
             [myScoreKeeper adjustScore:[q1 checkAnswer:[[myInputHandler getInput] intValue]]];
+            NSLog(@"Time spent on this question: %.2f seconds", [q1 timeTakenInSec]);
             [myScoreKeeper printScore];
             
             NSLog(@"Continue playing? (y/n): ");

@@ -33,7 +33,7 @@
     -(void) printScore {
         float total = (float) _correct + (float) _wrong;
         float percentage = (float)_correct/total* 100;
-        NSLog(@"Score: %i right, %i wrong ---- %f%%", _correct, _wrong, percentage);
+        NSLog(@"Score: %i right, %i wrong ---- %.2f%%", _correct, _wrong, percentage);
     }
 
 @end
