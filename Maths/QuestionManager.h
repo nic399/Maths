@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 
 @interface QuestionManager : NSObject
 
-@property NSMutableArray<AdditionQuestion*> *questions;
+@property NSMutableArray<Question*> *questions;
 @property double totalTime;
 
 -(instancetype)init;
--(void)addNewQuestion:(AdditionQuestion*)question;
+-(void)addNewQuestion:(Question*)question;
 -(NSString*)timeOutput;
 
 @end

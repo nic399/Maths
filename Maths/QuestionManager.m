@@ -19,7 +19,7 @@
     return self;
 }
 
--(void)addNewQuestion:(AdditionQuestion *)question {
+-(void)addNewQuestion:(Question *)question {
     [self.questions addObject:question];
     self.totalTime += question.timeTakenInSec;
 }

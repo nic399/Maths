@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "AdditionQuestion.h"
+#import "SubtractionQuestion.h"
+#import "DivisionQuestion.h"
+#import "MultiplicationQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -21,7 +24,7 @@ int main(int argc, const char * argv[]) {
         QuestionManager* myQuestionManager = [[QuestionManager alloc] init];
         
         while (play) {
-            AdditionQuestion * q1 = [AdditionQuestion new];
+            Question * q1 = [AdditionQuestion new];
             [q1 printQuestion];
             
             // NSString* inputString = [myInputHandler getInput];

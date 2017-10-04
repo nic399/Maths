@@ -1,5 +1,5 @@
 //
-//  AdditionQuestion.h
+//  SubtractionQuestion.h
 //  Maths
 //
 //  Created by Nicholas Fung on 2017-10-04.
@@ -8,9 +8,6 @@
 
 #import "Question.h"
 
-@interface AdditionQuestion : Question
-
--(BOOL)checkAnswer:(int)guess;
--(void)printQuestion;
+@interface SubtractionQuestion : Question
 
 @end
