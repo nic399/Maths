@@ -12,9 +12,10 @@
 @interface QuestionManager : NSObject
 
 @property NSMutableArray<AdditionQuestion*> *questions;
+@property double totalTime;
 
 -(instancetype)init;
 -(void)addNewQuestion:(AdditionQuestion*)question;
--(void)print;
+-(NSString*)timeOutput;
 
 @end

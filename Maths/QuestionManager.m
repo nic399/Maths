@@ -14,16 +14,20 @@
     self = [super init];
     if (self) {
         self.questions = [[NSMutableArray alloc] init];
+        self.totalTime = 0.0;
     }
     return self;
 }
 
 -(void)addNewQuestion:(AdditionQuestion *)question {
     [self.questions addObject:question];
+    self.totalTime += question.timeTakenInSec;
 }
 
--(void)print {
-    
+-(NSString*)timeOutput {
+    return [NSString stringWithFormat:@"total time: %.2fs, average time: %.2fs",
+            self.totalTime,
+            self.totalTime/[self.questions count]];
 }
 
 @end
