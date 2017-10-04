@@ -36,7 +36,6 @@
         default:
             break;
     }
-    
     return returnQuestion;
 }
 

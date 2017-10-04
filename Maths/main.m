@@ -15,6 +15,7 @@
 #import "DivisionQuestion.h"
 #import "MultiplicationQuestion.h"
 #import "QuestionFactory.h"
+#import "general_defines.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -23,9 +24,10 @@ int main(int argc, const char * argv[]) {
         InputHandler* myInputHandler = [InputHandler new];
         ScoreKeeper* myScoreKeeper = [[ScoreKeeper alloc] init];
         QuestionManager* myQuestionManager = [[QuestionManager alloc] init];
+        QuestionFactory* myQuestionFactory = [[QuestionFactory alloc] init];
         
         while (play) {
-            Question * q1 = [AdditionQuestion new];
+            Question * q1 = [myQuestionFactory generateRandomQuestion];
             [q1 printQuestion];
             
             [myScoreKeeper adjustScore:[q1 checkAnswer:[[myInputHandler getInput] intValue]]];

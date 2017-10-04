@@ -9,31 +9,31 @@
 #import "ScoreKeeper.h"
 
 @implementation ScoreKeeper
-    
-    -(ScoreKeeper*) init{
-        self = [super init];
-        if (self) {
-            _wrong=0;
-            _correct=0;
-        }
-        return self;
+
+-(ScoreKeeper*) init{
+    self = [super init];
+    if (self) {
+        _wrong=0;
+        _correct=0;
     }
-    
-    -(void) adjustScore:(BOOL)isCorrect {
-        if (isCorrect) {
-            NSLog(@"Right!");
-            _correct++;
-        }
-        else {
-            NSLog(@"Wrong!");
-            _wrong++;
-        }
+    return self;
+}
+
+-(void) adjustScore:(BOOL)isCorrect {
+    if (isCorrect) {
+        NSLog(@"Right!");
+        _correct++;
     }
-    
-    -(void) printScore {
-        float total = (float) _correct + (float) _wrong;
-        float percentage = (float)_correct/total* 100;
-        NSLog(@"Score: %i right, %i wrong ---- %.2f%%", _correct, _wrong, percentage);
+    else {
+        NSLog(@"Wrong!");
+        _wrong++;
     }
+}
+
+-(void) printScore {
+    float total = (float) _correct + (float) _wrong;
+    float percentage = (float)_correct/total* 100;
+    NSLog(@"Score: %i right, %i wrong ---- %.2f%%", _correct, _wrong, percentage);
+}
 
 @end

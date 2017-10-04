@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "general_defines.h"
 
 @interface ScoreKeeper : NSObject
-    
-    @property int correct;
-    @property int wrong;
-    
-    -(ScoreKeeper*) init;
-    -(void) printScore;
-    -(void) adjustScore: (BOOL) isCorrect;
+
+@property int correct;
+@property int wrong;
+
+-(ScoreKeeper*) init;
+-(void) printScore;
+-(void) adjustScore: (BOOL) isCorrect;
 
 @end

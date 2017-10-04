@@ -9,17 +9,13 @@
 #import "InputHandler.h"
 
 @implementation InputHandler
-    
-    
-    
-    -(NSString*) getInput
-    {
-        char inputChar[127];
-        fgets(inputChar, 127, stdin);
-        NSString* inputString = [NSString stringWithCString:inputChar encoding:NSUTF8StringEncoding];
-        NSString* trimmedString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        return trimmedString;
-    }
-    
-    
+
+-(NSString*) getInput {
+    char inputChar[127];
+    fgets(inputChar, 127, stdin);
+    NSString* inputString = [NSString stringWithCString:inputChar encoding:NSUTF8StringEncoding];
+    NSString* trimmedString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return trimmedString;
+}
+
 @end

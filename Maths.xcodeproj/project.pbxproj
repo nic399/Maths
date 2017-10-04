@@ -52,6 +52,7 @@
 		01DDD0B71F856F9600FC12C9 /* DivisionQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivisionQuestion.m; sourceTree = "<group>"; };
 		01DDD0B91F85810E00FC12C9 /* QuestionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionFactory.h; sourceTree = "<group>"; };
 		01DDD0BA1F85810E00FC12C9 /* QuestionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionFactory.m; sourceTree = "<group>"; };
+		01DDD0BC1F85871700FC12C9 /* general_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = general_defines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 				01DDD0AB1F85658D00FC12C9 /* QuestionManager.m */,
 				01468CB71F841E430015830D /* ScoreKeeper.h */,
 				01468CB81F841E430015830D /* ScoreKeeper.m */,
+				01DDD0BC1F85871700FC12C9 /* general_defines.h */,
 			);
 			path = Maths;
 			sourceTree = "<group>";

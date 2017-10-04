@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "general_defines.h"
 
 @interface Question : NSObject
 {
@@ -16,7 +17,6 @@
 
 @property int rightVal;
 @property int leftVal;
-
 
 -(instancetype) init;
 -(void)printQuestion;
