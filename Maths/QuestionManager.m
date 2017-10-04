@@ -10,4 +10,20 @@
 
 @implementation QuestionManager
 
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        self.questions = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+-(void)addNewQuestion:(AdditionQuestion *)question {
+    [self.questions addObject:question];
+}
+
+-(void)print {
+    
+}
+
 @end
